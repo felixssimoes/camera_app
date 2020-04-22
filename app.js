@@ -28,6 +28,8 @@
 //   if (!opts.keepalive) delete exec_callbacks[opts.id];
 // }
 
+webkit.messageHandlers.callbackHandler.postMessage('Script start');
+
 // Set constraints for the video stream
 var constraints = { video: { facingMode: 'user' }, audio: false };
 
