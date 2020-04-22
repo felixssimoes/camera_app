@@ -8,7 +8,6 @@ const cameraView = document.querySelector('#camera--view'),
 // Access the device camera and stream to cameraView
 function cameraStart() {
   webkit.messageHandlers.callbackHandler.postMessage('Camera start');
-  alert('Camera start');
   navigator.mediaDevices
     .getUserMedia(constraints)
     .then(function (stream) {
@@ -20,7 +19,6 @@ function cameraStart() {
       webkit.messageHandlers.callbackHandler.postMessage(
         'Oops. Something is broken.' + JSON.stringify(error)
       );
-      alert('Oops. Something is broken.' + JSON.stringify(error));
     });
 }
 // Take a picture when cameraTrigger is tapped
