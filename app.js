@@ -5,7 +5,7 @@
   };
 })();
 
-int exec_id = 0;
+var exec_id = 0;
 function exec(success, failure, ...) {
   // store the callbacks for later
   if (typeof success == 'function' || typeof failure == 'function') {
